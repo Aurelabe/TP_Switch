@@ -3,8 +3,8 @@
 echo "=== IP Spoofing Attack ==="
 echo "Objectif: Usurper une adresse IP"
 
-FAKE_IP="10.0.0.10"
-TARGET_IP="10.0.0.20"
+FAKE_IP="192.168.189.200"
+TARGET_IP="192.168.189.201"
 INTERFACE="eth0"
 
 echo "Envoi de paquets avec IP usurpee..."

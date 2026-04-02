@@ -12,7 +12,9 @@ sudo bash port_stealing.sh
 ```
 
 ## Configuration
-- Victim IP: 10.0.0.10
+- Victim PC1: 192.168.189.200
+- Victim PC2: 192.168.189.201
+- Attaquant: 192.168.189.128
 - Interface: eth0
 
 ## Outils

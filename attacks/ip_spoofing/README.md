@@ -14,8 +14,10 @@ sudo hping3 -a <FAKE_IP> -S -p 80 <TARGET>
 ```
 
 ## Configuration
-- Fake IP: 10.0.0.10
-- Target: 10.0.0.20
+- Fake IP: 192.168.189.200 (PC1)
+- Target: 192.168.189.201 (PC2)
+- Attaquant: 192.168.189.128
+- Interface: eth0
 
 ## Outils
 - Scapy (Python)

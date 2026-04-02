@@ -12,7 +12,8 @@ sudo bash rogue_dhcp.sh
 ```
 
 ## Configuration
-- Rogue DHCP IP: 192.168.189.128
+- Rogue DHCP: 192.168.189.128
+- Cible: 192.168.189.200 (PC1), 192.168.189.201 (PC2)
 - Gateway: 192.168.189.1
 - DNS: 8.8.8.8
 - Interface: eth0

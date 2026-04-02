@@ -15,7 +15,8 @@ sudo python3 cam_flooding.py
 
 ## Configuration
 - Interface: eth0
-- Generation de MACs aleatoires
+- Cible: 192.168.189.200 (PC1), 192.168.189.201 (PC2)
+- Attaquant: 192.168.189.128
 
 ## Outils
 - macof (dsniff)
