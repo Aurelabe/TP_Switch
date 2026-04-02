@@ -1,13 +1,21 @@
-# SYN Flood - Rapport d'attaque
+# SYN Flood - DoS
 
 ## Objectif
-Attaque par deni de service (DoS) sur PC1.
+Deni de service sur PC1 en envoyant des paquets SYN massifs.
 
 ## Principe
-Envoi de nombreux paquets SYN sans completer la connexion TCP.
+Envoi de nombreux paquets SYN sans completer le handshake TCP.
 
-## Commandes executees
-hping3 -S -p 80 --flood 10.0.0.10 -V
+## Utilisation
+```bash
+sudo python3 syn_flood.py
+```
+
+## Configuration
+- Target: 192.168.189.200:80
+- Attacker: 192.168.189.128
 
 ## Contre-mesures
-SYN cookies, rate limiting, firewall
+- SYN cookies
+- Rate limiting
+- Firewall
