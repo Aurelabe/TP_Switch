@@ -3,7 +3,7 @@
 echo "=== Port Scanning ==="
 echo "Objectif: Decouvrir les services ouverts sur PC2"
 
-CIBLE_IP="10.0.0.20"
+CIBLE_IP="192.168.189.201"
 RESULTS_DIR="~/attacks/port_scan"
 
 echo "=== Scan SYN rapide ==="

@@ -3,7 +3,7 @@
 echo "=== CAM Flooding Attack ==="
 echo "Objectif: Deborder la table CAM du switch"
 
-INTERFACE="eth0"
+INTERFACE="ens224"
 
 echo "Activation du flooding MAC..."
 echo "Utilisation de macof (dsniff)..."

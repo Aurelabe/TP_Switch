@@ -3,7 +3,7 @@
 echo "=== Rogue DHCP Server Attack ==="
 echo "Objectif: Inserer un serveur DHCP malveillant"
 
-INTERFACE="eth0"
+INTERFACE="ens224"
 ROGUE_IP="192.168.189.128"
 NETWORK="192.168.189.0/24"
 GATEWAY="192.168.189.1"

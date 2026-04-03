@@ -14,6 +14,7 @@ sudo python3 syn_flood.py
 ## Configuration
 - Target: 192.168.189.200:80
 - Attacker: 192.168.189.128
+- Interface: ens224
 
 ## Contre-mesures
 - SYN cookies

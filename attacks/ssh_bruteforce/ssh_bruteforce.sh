@@ -3,7 +3,7 @@
 echo "=== SSH Brute Force Attack ==="
 echo "Objectif: Trouver le mot de passe SSH de PC2"
 
-CIBLE_IP="10.0.0.20"
+CIBLE_IP="192.168.189.201"
 UTILISATEUR="admin"
 RESULTS_DIR="~/attacks/ssh_bruteforce"
 

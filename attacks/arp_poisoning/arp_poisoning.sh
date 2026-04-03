@@ -3,9 +3,9 @@
 echo "=== ARP Poisoning Attack ==="
 echo "Objectif: Se placer en homme du milieu entre PC1 et PC2"
 
-VICTIME_IP="10.0.0.10"
-CIBLE_IP="10.0.0.20"
-INTERFACE="eth0"
+VICTIME_IP="192.168.189.200"
+CIBLE_IP="192.168.189.201"
+INTERFACE="ens224"
 
 echo "Activation du routage IP..."
 echo 1 > /proc/sys/net/ipv4/ip_forward

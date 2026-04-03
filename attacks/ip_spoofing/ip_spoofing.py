@@ -2,7 +2,7 @@
 from scapy.all import *
 import sys
 
-def ip_spoofing(src_ip, dst_ip, count=100, interface="eth0"):
+def ip_spoofing(src_ip, dst_ip, count=100, interface="ens224"):
     print(f"[*] IP Spoofing: {src_ip} -> {dst_ip}")
     print(f"[*] Envoi de {count} paquets...")
     
